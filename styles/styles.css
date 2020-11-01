@@ -56,7 +56,7 @@
 }
 
 body {
-  background-color: #1A1A1A;
+  background-color: #131313;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +79,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 100px;
 }
 
 main section {
@@ -139,5 +140,66 @@ main section footer .material-icons {
 main img {
   -webkit-animation: 1s slideFromTop;
           animation: 1s slideFromTop;
+}
+
+@media (max-width: 775px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  main section {
+    text-align: center;
+  }
+  main section h1 {
+    -webkit-animation: 1s slideFromLeft;
+            animation: 1s slideFromLeft;
+  }
+  main section footer {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 50px;
+    -webkit-animation: 1s slideFromBottom;
+            animation: 1s slideFromBottom;
+  }
+  main img {
+    margin: 50px 0;
+    margin-left: 7px;
+    -webkit-animation: 1s slideFromBottom;
+            animation: 1s slideFromBottom;
+  }
+}
+
+@media (max-width: 380px) {
+  main {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+
+@media (max-height: 630px) {
+  main {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media (max-height: 500px) {
+  main {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,6 @@
 $primarycolor: #f0dc0b;
 $secondarycolor: #f5f5f5;
+$thirdcolor: #131313;
 
 @keyframes slideFromTop {
   from {
@@ -31,7 +32,7 @@ $secondarycolor: #f5f5f5;
 }
 
 body {
-  background-color: #1A1A1A;
+  background-color: $thirdcolor;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +45,7 @@ main {
   height: 596px;
   display:flex;
   justify-content: space-between;
+  margin: 0 100px;
 
   section {
     display:flex;
@@ -87,5 +89,54 @@ main {
 
   img {
     animation: 1s slideFromTop;
+  }
+}
+
+@media (max-width: 775px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    transform: scale(0.8);
+
+    section {
+      text-align: center;
+
+      h1 {
+        animation: 1s slideFromLeft;
+      }
+
+      footer {
+        width: 100%;
+        justify-content: center;
+        margin-top: 50px;
+        animation: 1s slideFromBottom;
+      }
+    }
+
+    img {
+      margin: 50px 0;
+      margin-left: 7px;
+      animation: 1s slideFromBottom;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  main {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-height: 630px) {
+  main {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-height: 500px) {
+  main {
+    transform: scale(0.7);
   }
 }
